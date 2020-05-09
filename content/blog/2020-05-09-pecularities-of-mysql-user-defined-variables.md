@@ -127,11 +127,13 @@ order by first_name; # A. Using where; Using filesort
 ```
 
 A:
+
 | actor_id | cnt
 | --- | --- |
 | 1 | 200 |
 
 B:
+
 | actor_id | cnt
 | --- | --- |
 | 58 | 1 |
