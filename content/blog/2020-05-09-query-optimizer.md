@@ -6,10 +6,9 @@ tags:
   - MySQL
   - Database
   - Query Optimizer
-draft: true
+draft: false
 ---
 
-查询优化器QO负责从中间表示产生出较优的执行计划EP。
 从SQL语句开始：
 ```sql
 SELECT salary
@@ -20,3 +19,4 @@ where salary < 75000
 $$\sigma_{salary < 75000}(\Pi(instructor))$$
 或者
 $$\Pi_{salary}(\sigma_{salary < 75000}(instructor))$$
+然后查询优化器QO负责从中间表示产生出较优的执行计划EP。
