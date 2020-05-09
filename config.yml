@@ -1,4 +1,4 @@
-baseline: Your blogging assistant.
+baseline: 汤醇味鲜
 theme: hyde
 output:
   formats:
@@ -6,7 +6,7 @@ output:
       mediatype: text/plain
       extension: ""
 keywords: Cecil, Static Site Generator, SSG
-author: Arnaud Ligny
+author: Dingyu Ma
 title: 马旺小炒
 description: Best in Qiao Zi Kou
 baseurl: /
