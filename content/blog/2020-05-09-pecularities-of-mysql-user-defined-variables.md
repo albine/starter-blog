@@ -41,6 +41,7 @@ where @rownum <= 1 # Using where; Using index
 7. `UNION`
 8. `ORDER BY`
 9. `LIMIT & OFFSET`
+
 如果我们知道执行计划EP，我们应该能确定何时输出到结果集。
 
 这个结果似乎是在意料之中。那如果我们加上一个`ORDER BY`会怎么样呢？那问题来了，`ORDER BY`哪一行呢？我们看看有索引和没索引有什么区别：
@@ -55,6 +56,7 @@ order by first_name; # A. 这行没有索引，Using where; Using filesort
 ```
 
 A的输出：
+
 | actor_id | cnt
 | --- | --- |
 |71	|1
@@ -66,7 +68,7 @@ A的输出：
 |29	|7
 |...|...
 
-一共输出200行，是不是还……蛮酷的😂。而B的输出和前面没什么区别：
+一共输出200行，是不是还……蛮多的😂。而B的输出和前面没什么区别：
 
 | actor_id | cnt
 | --- | --- |
@@ -159,5 +161,5 @@ order by first_name, least(0, @rownum := @rownum + 1);
 > If an index cannot be used to satisfy an ORDER BY clause, MySQL performs a filesort operation that reads table rows and sorts them.[\[4\]](https://dev.mysql.com/doc/refman/8.0/en/order-by-optimization.html)。
 
 <br />
-<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br />
+<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a>
 This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
