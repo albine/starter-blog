@@ -6,7 +6,7 @@ tags:
   - MySQL
 draft: false
 ---
-High Performance MySQL 第253页有个有趣的例子：
+*High Performance MySQL* 第253页有个有趣的例子：
 
 ```sql
 set @rownum := 0;
@@ -104,7 +104,7 @@ filesort的过程如下，参考[\[3\]](http://s.petrunia.net/blog/?p=24)。
 所以问题的关键就在NLJ的循环里有没有更新变量。再次考虑手册中的
 >when sent to the client
 
-High Performance MySQL 第228页讲到：
+*High Performance MySQL* 第228页讲到：
 
 > As soon as MySQL processes the last table and generates one row successfully, it can and should send that row to the client.
 
