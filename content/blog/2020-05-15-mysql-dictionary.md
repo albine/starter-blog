@@ -1,3 +1,12 @@
+---
+title: SQL Query Problems Hoard
+date: 2020-05-09T07:07:22.911Z
+image: /images/lutetia-to-roma.jpg
+tags:
+  - MySQL
+  - SQL
+draft: true
+---
 #### Double Write
 Double Write(DW)的用处：
 如果写盘的时候挂掉，硬盘的表就挂了。
